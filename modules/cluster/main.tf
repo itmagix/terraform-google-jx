@@ -114,9 +114,7 @@ resource "kubernetes_config_map" "jenkins_x_requirements" {
   }
 
   lifecycle {
-    ignore_changes = [
-      all
-    ]
+    ignore_changes = all
   }
   depends_on = [
     google_container_cluster.jx_cluster
